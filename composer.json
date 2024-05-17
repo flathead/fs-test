@@ -21,7 +21,7 @@
 		}
 	],
 	"require": {
-		"php": ">=8.1.8",
+		"php": ">=8.1.0",
 		"ext-json": "*",
 		"wpackagist-plugin/cyr3lat": "^3.7",
 		"wpackagist-plugin/all-in-one-seo-pack": "^4.6.2",
