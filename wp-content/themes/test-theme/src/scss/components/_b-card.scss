@@ -1,0 +1,52 @@
+.b-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 0;
+    background: var(--c-background-main);
+    @include media(tablet) {
+        grid-template-columns: 170px 1fr;
+        grid-template-rows: auto;
+    }
+    &__body {
+        padding: var(--indent-vert-2);
+        display: flex;
+        flex-direction: column;
+        gap: var(--indent-vert-1);
+        justify-content: space-between;
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .b-card {
+            &__author {
+                font-style: italic;
+                color: var(--c-text-alt);
+                span {
+                    color: var(--c-text);
+                }
+            }
+            &__rating {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .like-count {
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: #008000;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    &__subtitle {
+        color: var(--c-text-alt);
+    }
+    &__img {
+        min-height: 170px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

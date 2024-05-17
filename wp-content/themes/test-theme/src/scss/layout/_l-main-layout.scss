@@ -1,0 +1,25 @@
+.l-main-layout {
+    display: flex;
+    flex-direction: column;
+    gap: var(--indent-vert-3);
+    @include media(desktop) {
+        flex-direction: row;
+    }
+    main {
+        flex: 1;
+        padding: var(--indent-vert-1);
+        background: var(--c-background-secondary);
+        @include media(tablet) {
+            padding: var(--indent-vert-3);
+        }
+    }
+    aside {
+        flex: 0 0 auto;
+        height: max-content;
+        padding: var(--indent-vert-3);
+        background: var(--c-background-secondary);
+        @include media(desktop) {
+            flex: 0 0 300px;
+        }
+    }
+}

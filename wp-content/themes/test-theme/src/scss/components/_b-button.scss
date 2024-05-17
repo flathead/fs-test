@@ -1,0 +1,12 @@
+.b-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    &--like, &--dislike {
+        transition: all .3s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

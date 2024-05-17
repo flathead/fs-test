@@ -1,0 +1,59 @@
+.b-pagination {
+    font-size: 14px;
+    line-height: 16.41px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: var(--indent-vert-3);
+
+    a, span {
+        font-family: 'Roboto Regular';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        width: 32px;
+        border-radius: 100%;
+        transition: all .15s;
+        &.page-numbers {
+            &.next, &.prev {
+                span {
+                    display: none;
+                }
+
+                @include media(tablet) {
+                    width: 60px;
+                    background: none !important;
+                    font-weight: 700;
+                    @include media(tablet) {
+                        span {
+                            display: flex;
+                        }
+                        svg {
+                            display: none;
+                        }
+                    }
+                }
+                &:hover {
+                    background: #e5e5e5;
+                }
+            }
+            &:not(.next), &:not(.prev) {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            &.current {
+                background: var(--c-text);
+                color: #fff;
+                text-decoration: none !important;
+            }
+            &.dots {
+                background: none !important;
+                text-decoration: none !important;
+            }
+        }
+    }
+}
